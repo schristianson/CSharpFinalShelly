@@ -18,6 +18,10 @@ namespace CSharpFinalWagCorporation
 {
     class Program
     {
+        private static object director;
+        private static object finish;
+        private static object serial;
+
         static void Main(string[] args)
         {
             //VisitorPatternDemo();
@@ -27,12 +31,12 @@ namespace CSharpFinalWagCorporation
             //FacadePatternDemo();
             //DecoratorPatternDemo();
             //AdapterPatternDemo();
-            SingletonPatternDemo();
+            SingletonPattern();
             //BuilderPatternDemo();
             //AbstractFactoryDemo();
         }
 
-        private static void SingletonPatternDemo()
+        private static void SingletonPattern()
         {
             SerialNumberGenerator generator = SerialNumberGenerator.Instance;
 
@@ -40,13 +44,12 @@ namespace CSharpFinalWagCorporation
             Console.WriteLine("04MED " + SerialNumberGenerator.Instance.NextSerial);
             Console.WriteLine("06LRG " + generator.NextSerial);
 
+
             // The code provided will print ‘Hello World’ to the console.
             // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
             Console.WriteLine("Hello World!");
             Console.ReadKey();
-
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
-
         }
     }
 }

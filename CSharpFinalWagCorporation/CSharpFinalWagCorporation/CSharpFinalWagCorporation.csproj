@@ -46,11 +46,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractGadget.cs" />
+    <Compile Include="AbstractWidgetAppl.cs" />
+    <Compile Include="Base\IGadget.cs" />
+    <Compile Include="GadgetBuilder.cs" />
     <Compile Include="IApplication.cs" />
     <Compile Include="ISerial.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\SerialNumberGenerator.cs" />
+    <Compile Include="Visitor\IGadgetBuyer.cs" />
+    <Compile Include="Visitor\IBuyer.cs" />
     <Compile Include="WidgetFinish.cs" />
   </ItemGroup>
   <ItemGroup>
