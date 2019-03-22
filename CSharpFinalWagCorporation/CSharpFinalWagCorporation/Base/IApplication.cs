@@ -9,18 +9,18 @@ namespace CSharpFinalWagCorporation
     public interface IApplication
     {
         //IWheel GetWheel { get; }
-        ISerial GetSerial { get; }
+        IGadget GetGadget { get; }
 
-        WidgetFinish ColorType { get; }
+        GadgetFinish FinishType { get; }
 
         decimal Price { get; }
 
-        void Paint(WidgetFinish finish);
+        void Paint(GadgetFinish finish);
 
-        void CleanFrame();
+        //void CleanFrame();
 
-        void AirTires();
+        //void AirTires();
 
-        void TestRide();
+        //void TestRide();
     }
 }

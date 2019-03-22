@@ -12,7 +12,7 @@ using Singleton;
 //using Iterator;
 //using System.Collections;
 //using Observer;
-//using Visitor;                 // add visitor namespace
+using Visitor;                 // add visitor namespace
 
 namespace CSharpFinalWagCorporation
 {
@@ -24,7 +24,7 @@ namespace CSharpFinalWagCorporation
 
         static void Main(string[] args)
         {
-            //VisitorPatternDemo();
+            VisitorPatternDemo();
             //ObserverPatternDemo();
             //IteratorPatternDemo2();
             //IteratorPatternDemo();
@@ -34,6 +34,13 @@ namespace CSharpFinalWagCorporation
             SingletonPattern();
             //BuilderPatternDemo();
             //AbstractFactoryDemo();
+        }
+
+        private static void VisitorPatternDemo()
+        {
+            IGadget gadget = new SmallGadget(24);
+            //gadget.AcceptVisitor(new GadgetDiagnostics());
+            gadget.AcceptBuyer(new GadgetInventory());
         }
 
         private static void SingletonPattern()

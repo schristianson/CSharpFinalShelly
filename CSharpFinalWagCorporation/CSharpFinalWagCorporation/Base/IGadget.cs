@@ -10,7 +10,7 @@ namespace CSharpFinalWagCorporation
     public interface IGadget : IBuyer   //Implement an interface within an interface
     {
         int Size { get; }
-        bool IsWide { get; }
+        bool IsSmall { get; }
 
         void AcceptBuyer(IGadgetBuyer buyer); //abstractwheel takes in this interface
     }

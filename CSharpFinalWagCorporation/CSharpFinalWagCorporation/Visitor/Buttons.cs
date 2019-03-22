@@ -7,13 +7,11 @@ using CSharpFinalWagCorporation;
 
 namespace Visitor
 {
-    public interface IGadgetBuyer
+    public class Buttons : IBuyer
     {
-        void Buyer(IGadget gadget);
-
-        void Visit(Switches switches);
-
-        void Visit(Buttons buttons);
-
+        public void AcceptBuyer(IGadgetBuyer buyer)
+        {
+            // TODO add method here
+        }
     }
 }

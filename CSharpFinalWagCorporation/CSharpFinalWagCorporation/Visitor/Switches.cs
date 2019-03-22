@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Visitor
 {
-    public interface IBuyer             //IVisitable
+    public class Switches : IBuyer
     {
-        void AcceptBuyer(IGadgetBuyer buyer);
+        public void AcceptBuyer(IGadgetBuyer buyer)
+        {
+            //buyer.Buyer(this);
+        }
     }
 }

@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace CSharpFinalWagCorporation
 {
-    //public enum BikeColor
-    public enum WidgetFinish
+    public class SmallGadget : AbstractGadget
     {
-        Plain, Painted, Plated
+        public SmallGadget(int size) : base(size, true)
+        {
+
+        }
     }
 }

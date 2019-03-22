@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Visitor
+namespace CSharpFinalWagCorporation
 {
-    public interface IBuyer             //IVisitable
+    //public enum BikeColor
+    public enum GadgetFinish
     {
-        void AcceptBuyer(IGadgetBuyer buyer);
+        Plain, Painted, Plated
     }
 }
