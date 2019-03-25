@@ -13,6 +13,8 @@ namespace CSharpFinalWagCorporation
         private bool _isSmall;
         private Switches _switches;
         private Buttons _buttons;
+        private PowerSource _powersource;
+        //private PowerSource powerSource;
 
         public int Size
         {
@@ -35,18 +37,20 @@ namespace CSharpFinalWagCorporation
             this._isSmall = isSmall;
             _switches = new Switches();
             _buttons = new Buttons();
+            _powersource = new PowerSource();
         }
 
         public virtual void AcceptBuyer(IGadgetBuyer buyer)
         {
             _switches.AcceptBuyer(buyer);
             _buttons.AcceptBuyer(buyer);
+            _powersource.AcceptBuyer(buyer);
             buyer.Buyer(this);
         }
 
         public override string ToString()
         {
-            return this.GetType().Name + " with a wheel size of " + _size + " inches";
+            return this.GetType().Name + " with a gadget size of " + _size + " inches";
         }
     }
 }

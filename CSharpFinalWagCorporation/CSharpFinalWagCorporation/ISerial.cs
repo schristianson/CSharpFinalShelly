@@ -11,6 +11,6 @@ namespace CSharpFinalWagCorporation
         int Size { get; }
         bool IsWide { get; }
 
-        //void AcceptVisitor(IWheelVisitor visitor); //abstractwheel takes in this interface
+        //void AcceptVisitor(IGadgetBuyer buyer); //abstractgadget takes in this interface
     }
 }

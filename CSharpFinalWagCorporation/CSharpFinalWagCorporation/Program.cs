@@ -18,13 +18,10 @@ namespace CSharpFinalWagCorporation
 {
     class Program
     {
-        private static object director;
-        private static object finish;
-        private static object serial;
 
         static void Main(string[] args)
         {
-            VisitorPatternDemo();
+            VisitorPattern();
             //ObserverPatternDemo();
             //IteratorPatternDemo2();
             //IteratorPatternDemo();
@@ -36,11 +33,13 @@ namespace CSharpFinalWagCorporation
             //AbstractFactoryDemo();
         }
 
-        private static void VisitorPatternDemo()
+        private static void VisitorPattern()
         {
             IGadget gadget = new SmallGadget(24);
             //gadget.AcceptVisitor(new GadgetDiagnostics());
             gadget.AcceptBuyer(new GadgetInventory());
+
+            Console.WriteLine(gadget);
         }
 
         private static void SingletonPattern()

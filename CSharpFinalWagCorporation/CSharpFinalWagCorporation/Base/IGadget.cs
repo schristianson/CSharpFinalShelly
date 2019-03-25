@@ -12,6 +12,6 @@ namespace CSharpFinalWagCorporation
         int Size { get; }
         bool IsSmall { get; }
 
-        void AcceptBuyer(IGadgetBuyer buyer); //abstractwheel takes in this interface
+        void AcceptBuyer(IGadgetBuyer buyer); //abstractgadget takes in this interface
     }
 }

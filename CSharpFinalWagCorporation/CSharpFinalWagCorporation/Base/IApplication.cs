@@ -8,7 +8,6 @@ namespace CSharpFinalWagCorporation
 {
     public interface IApplication
     {
-        //IWheel GetWheel { get; }
         IGadget GetGadget { get; }
 
         GadgetFinish FinishType { get; }
@@ -17,7 +16,7 @@ namespace CSharpFinalWagCorporation
 
         void Paint(GadgetFinish finish);
 
-        //void CleanFrame();
+        void PowerSource();
 
         //void AirTires();
 

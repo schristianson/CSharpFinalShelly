@@ -62,6 +62,7 @@
     <Compile Include="Visitor\IBuyer.cs" />
     <Compile Include="GadgetFinish.cs" />
     <Compile Include="Visitor\GadgetInventory.cs" />
+    <Compile Include="Visitor\PowerSource.cs" />
     <Compile Include="Visitor\Switches.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -15,13 +15,15 @@ namespace Visitor
         public GadgetInventory()
         {
             _switchesCount = 1;
-            _buttonsCount = 1;
+            _buttonsCount = 2;
+            _powersource = "battery";
         }
 
+        public object _powersource { get; private set; }
 
         public void Buyer(IGadget gadget)
         {
-            Console.WriteLine("The gadget has: {0} switches and {1} buttons", _switchesCount, _buttonsCount);
+            Console.WriteLine("The Small Gadget has: {0} switches and {1} buttons and {2} powersource", _switchesCount, _buttonsCount, _powersource);
         }
 
         public void Visit(Switches switches)
@@ -32,6 +34,11 @@ namespace Visitor
         public void Visit(Buttons buttons)
         {
             _buttonsCount++;
+        }
+
+        public void Visit(PowerSource powersource)
+        {
+            Console.WriteLine("powered by a battery");
         }
     }
 }

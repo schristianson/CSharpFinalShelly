@@ -7,7 +7,7 @@ using CSharpFinalWagCorporation;
 
 namespace Visitor
 {
-    public class Switches : IBuyer
+    public class PowerSource : IBuyer
     {
         public void AcceptBuyer(IGadgetBuyer buyer)
         {

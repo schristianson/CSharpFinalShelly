@@ -15,5 +15,7 @@ namespace Visitor
 
         void Visit(Buttons buttons);
 
+        void Visit(PowerSource powersource);
+
     }
 }
