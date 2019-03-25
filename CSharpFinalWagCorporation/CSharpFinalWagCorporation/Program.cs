@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 //using AbstractFactory;
 //using Builder;
+using CSharpFinalWagCorporation;
 using Singleton;
 //using Adapter;
 //using Decorator;
@@ -31,6 +32,21 @@ namespace CSharpFinalWagCorporation
             SingletonPattern();
             //BuilderPatternDemo();
             //AbstractFactoryDemo();
+        }
+
+        private static void WidgetFactory()
+        {
+            // example of using an object of the base:
+
+            AbstractWidget widget = new SmallWidget();
+
+            //widget.Gears 
+
+            //How to use the BuilderPattern:
+            //BikeBuilder builder = new MountainBikeBuilder(mountainBike);
+            //BikeDirector director = new MountainBikeDirector();
+            //IApplication appl = director.Build(builder);
+            //Console.WriteLine(appl);
         }
 
         private static void VisitorPattern()

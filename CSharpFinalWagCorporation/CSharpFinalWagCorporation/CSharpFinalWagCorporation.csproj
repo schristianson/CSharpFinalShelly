@@ -47,10 +47,12 @@
   <ItemGroup>
     <Compile Include="Base\AbstractGadget.cs" />
     <Compile Include="AbstractWidgetAppl.cs" />
+    <Compile Include="Base\AbstractWidget.cs" />
     <Compile Include="Base\IGadget.cs" />
     <Compile Include="Base\LargeGadget.cs" />
     <Compile Include="Base\MediumGadget.cs" />
     <Compile Include="Base\SmallGadget.cs" />
+    <Compile Include="Base\SmallWidget.cs" />
     <Compile Include="GadgetBuilder.cs" />
     <Compile Include="Base\IApplication.cs" />
     <Compile Include="ISerial.cs" />

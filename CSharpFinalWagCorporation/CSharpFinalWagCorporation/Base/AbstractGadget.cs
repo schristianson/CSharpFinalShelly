@@ -14,7 +14,36 @@ namespace CSharpFinalWagCorporation
         private Switches _switches;
         private Buttons _buttons;
         private PowerSource _powersource;
-        //private PowerSource powerSource;
+
+        public void SizeGadgetIfChain()
+        {
+            int size = 1;
+            Console.WriteLine("Before If");
+            if (size == 1)
+            {
+                Console.WriteLine("Buy Small Gadget");
+            }
+            else if (size == 2)
+            {
+                Console.WriteLine("Buy Medium Gadget");
+            }
+            else if (size == 3)
+            {
+                Console.WriteLine("Buy Large Gadget");
+            }
+            else if (size > 3)
+            {
+                Console.WriteLine("Gadget out of stock");
+            }
+            else
+            {
+                Console.WriteLine("Size requested not found");
+            }
+            Console.WriteLine("After If");
+        }
+
+
+
 
         public int Size
         {
