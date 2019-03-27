@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VisitorWidget
 {
-    public interface IGetter             //IVisitable
+    public interface IGetter
     {
         void AcceptGetter(IWidgetGetter getter);
     }

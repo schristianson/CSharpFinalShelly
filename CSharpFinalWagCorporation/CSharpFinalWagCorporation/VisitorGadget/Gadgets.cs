@@ -10,7 +10,7 @@ namespace VisitorGadget
     {
         public void AcceptBuyer(IGadgetBuyer buyer)
         {
-            // TODO add method here
+
         }
     }
 }

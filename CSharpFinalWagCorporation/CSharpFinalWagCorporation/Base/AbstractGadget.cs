@@ -17,7 +17,7 @@ namespace CSharpFinalWagCorporation
         private Buttons _buttons;
         private PowerSource _powersource;
 
-        public void SizeGadgetIfChain(int size)
+        public void SizeGadgetIfChain(int size, GadgetFinish finish)
         {
             //int size = 1;
             SerialNumberGenerator generator = SerialNumberGenerator.Instance;
@@ -26,6 +26,7 @@ namespace CSharpFinalWagCorporation
             {
                 Console.WriteLine("small gadget ====> ");
                 AcceptBuyer(new GadgetInventory(2, 1, 2, "battery"));
+                Console.WriteLine("This gadget is gold " + finish);
 
                 IWidget widget = new SmallWidget(14);
                 widget.AcceptGetter(new WidgetInventory());

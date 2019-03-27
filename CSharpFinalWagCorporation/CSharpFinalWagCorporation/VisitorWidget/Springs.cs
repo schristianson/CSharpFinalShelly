@@ -12,7 +12,7 @@ namespace VisitorWidget
     {
         public void AcceptGetter(IWidgetGetter getter)
         {
-            //buyer.Buyer(this);
+
         }
     }
 }

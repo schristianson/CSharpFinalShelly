@@ -11,7 +11,7 @@ namespace VisitorGadget
     {
         public void AcceptBuyer(IGadgetBuyer buyer)
         {
-            //buyer.Buyer(this);
+
         }
     }
 }
