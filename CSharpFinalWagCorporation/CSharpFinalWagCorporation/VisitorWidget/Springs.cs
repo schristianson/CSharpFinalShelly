@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CSharpFinalWagCorporation;
+using VisitorWidget;
 
-namespace Visitor
+namespace VisitorWidget
 {
-    public class Buttons : IBuyer
+    public class Springs : IGetter
     {
-        public void AcceptBuyer(IGadgetBuyer buyer)
+        public void AcceptGetter(IWidgetGetter getter)
         {
-            // TODO add method here
+            //buyer.Buyer(this);
         }
     }
 }

@@ -13,58 +13,64 @@ using Singleton;
 //using Iterator;
 //using System.Collections;
 //using Observer;
-using Visitor;                 // add visitor namespace
+using VisitorGadget;                 // add visitor namespace
+using VisitorWidget;
 
 namespace CSharpFinalWagCorporation
 {
     class Program
     {
+        //private static bool widget;
 
         static void Main(string[] args)
         {
-            VisitorPattern();
+            VisitorPatternG();
             //ObserverPatternDemo();
             //IteratorPatternDemo2();
             //IteratorPatternDemo();
             //FacadePatternDemo();
             //DecoratorPatternDemo();
             //AdapterPatternDemo();
-            SingletonPattern();
+            //SingletonPattern();
             //BuilderPatternDemo();
             //AbstractFactoryDemo();
         }
 
-        private static void WidgetFactory()
-        {
-            // example of using an object of the base:
+        //private static void WidgetFactory()
+        //{
+        // example of using an object of the base:
 
-            AbstractWidget widget = new SmallWidget();
+        //AbstractWidget widget = new SmallWidget();
 
-            //widget.Gears 
+        //widget.Gears 
 
-            //How to use the BuilderPattern:
-            //BikeBuilder builder = new MountainBikeBuilder(mountainBike);
-            //BikeDirector director = new MountainBikeDirector();
-            //IApplication appl = director.Build(builder);
-            //Console.WriteLine(appl);
-        }
+        //How to use the BuilderPattern:
+        //BikeBuilder builder = new MountainBikeBuilder(mountainBike);
+        //BikeDirector director = new MountainBikeDirector();
+        //IApplication appl = director.Build(builder);
+        //Console.WriteLine(appl);
+        //}
 
-        private static void VisitorPattern()
+        private static void VisitorPatternG()
         {
             IGadget gadget = new SmallGadget(24);
+            gadget.SizeGadgetIfChain(1);
             //gadget.AcceptVisitor(new GadgetDiagnostics());
-            gadget.AcceptBuyer(new GadgetInventory());
+            //gadget.AcceptBuyer(new GadgetInventory(1, 1, "battery"));
 
             Console.WriteLine(gadget);
+            //IWidget widget = new SmallWidget(14);
+            //widget.AcceptGetter(new WidgetInventory());
+            //Console.WriteLine(widget);
         }
 
         private static void SingletonPattern()
         {
             SerialNumberGenerator generator = SerialNumberGenerator.Instance;
 
-            Console.WriteLine("02SML " + generator.NextSerial);
-            Console.WriteLine("04MED " + SerialNumberGenerator.Instance.NextSerial);
-            Console.WriteLine("06LRG " + generator.NextSerial);
+            Console.WriteLine("Sticker 02SML " + generator.NextSerial);
+            Console.WriteLine("Sticker 04MED " + SerialNumberGenerator.Instance.NextSerial);
+            Console.WriteLine("Sticker 06LRG " + generator.NextSerial);
 
 
             // The code provided will print ‘Hello World’ to the console.

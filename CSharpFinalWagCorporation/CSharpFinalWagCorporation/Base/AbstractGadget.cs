@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Singleton;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Visitor;
+using VisitorGadget;
+using VisitorWidget;
 
 namespace CSharpFinalWagCorporation
 {
@@ -15,21 +17,40 @@ namespace CSharpFinalWagCorporation
         private Buttons _buttons;
         private PowerSource _powersource;
 
-        public void SizeGadgetIfChain()
+        public void SizeGadgetIfChain(int size)
         {
-            int size = 1;
-            Console.WriteLine("Before If");
+            //int size = 1;
+            SerialNumberGenerator generator = SerialNumberGenerator.Instance;
+            Console.WriteLine("Buy the Lowest priced ");
             if (size == 1)
             {
-                Console.WriteLine("Buy Small Gadget");
+                Console.WriteLine("small gadget ====> ");
+                AcceptBuyer(new GadgetInventory(2, 1, 2, "battery"));
+
+                IWidget widget = new SmallWidget(14);
+                widget.AcceptGetter(new WidgetInventory());
+                Console.WriteLine("Sticker 02SML " + generator.NextSerial);
+                Console.WriteLine(widget);
             }
             else if (size == 2)
             {
                 Console.WriteLine("Buy Medium Gadget");
+                AcceptBuyer(new GadgetInventory(5, 1, 2, "solar"));
+
+                IWidget widget = new MediumWidget(14);
+                widget.AcceptGetter(new WidgetInventory());
+                Console.WriteLine("Sticker 04MED " + generator.NextSerial);
+                Console.WriteLine(widget);
             }
             else if (size == 3)
             {
                 Console.WriteLine("Buy Large Gadget");
+                AcceptBuyer(new GadgetInventory(12, 2, 4, "generator"));
+
+                IWidget widget = new LargeWidget(14);
+                widget.AcceptGetter(new WidgetInventory());
+                Console.WriteLine("Sticker 06LRG " + generator.NextSerial);
+                Console.WriteLine(widget);
             }
             else if (size > 3)
             {
@@ -39,7 +60,7 @@ namespace CSharpFinalWagCorporation
             {
                 Console.WriteLine("Size requested not found");
             }
-            Console.WriteLine("After If");
+            //Console.WriteLine("After If");
         }
 
 

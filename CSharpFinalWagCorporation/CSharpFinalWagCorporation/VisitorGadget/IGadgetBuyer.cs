@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CSharpFinalWagCorporation;
 
-namespace Visitor
+namespace VisitorGadget
 {
     public interface IGadgetBuyer
     {

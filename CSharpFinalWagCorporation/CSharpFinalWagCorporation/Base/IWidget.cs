@@ -8,11 +8,11 @@ using VisitorWidget;
 
 namespace CSharpFinalWagCorporation
 {
-    public interface IGadget : IBuyer   //Implement an interface within an interface
+    public interface IWidget : IBuyer   //Implement an interface within an interface
     {
         int Size { get; }
         bool IsSmall { get; }
-        void SizeGadgetIfChain(int size);
-        new void AcceptBuyer(IGadgetBuyer buyer); //abstractgadget takes in this interface
+
+        void AcceptGetter(IWidgetGetter getter); //abstractgadget takes in this interface
     }
 }

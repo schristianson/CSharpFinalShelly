@@ -50,7 +50,9 @@
     <Compile Include="Base\AbstractWidget.cs" />
     <Compile Include="Base\IGadget.cs" />
     <Compile Include="Base\LargeGadget.cs" />
+    <Compile Include="Base\LargeWidget.cs" />
     <Compile Include="Base\MediumGadget.cs" />
+    <Compile Include="Base\MediumWidget.cs" />
     <Compile Include="Base\SmallGadget.cs" />
     <Compile Include="Base\SmallWidget.cs" />
     <Compile Include="GadgetBuilder.cs" />
@@ -59,16 +61,26 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Singleton\SerialNumberGenerator.cs" />
-    <Compile Include="Visitor\Buttons.cs" />
-    <Compile Include="Visitor\IGadgetBuyer.cs" />
-    <Compile Include="Visitor\IBuyer.cs" />
+    <Compile Include="VisitorGadget\Buttons.cs" />
+    <Compile Include="VisitorGadget\Gadgets.cs" />
+    <Compile Include="VisitorGadget\IGadgetBuyer.cs" />
+    <Compile Include="VisitorGadget\IBuyer.cs" />
     <Compile Include="GadgetFinish.cs" />
-    <Compile Include="Visitor\GadgetInventory.cs" />
-    <Compile Include="Visitor\PowerSource.cs" />
-    <Compile Include="Visitor\Switches.cs" />
+    <Compile Include="VisitorGadget\GadgetInventory.cs" />
+    <Compile Include="VisitorGadget\PowerSource.cs" />
+    <Compile Include="VisitorGadget\Switches.cs" />
+    <Compile Include="VisitorGadget\Widgets.cs" />
+    <Compile Include="VisitorWidget\Gears.cs" />
+    <Compile Include="VisitorWidget\IGetter.cs" />
+    <Compile Include="Base\IWidget.cs" />
+    <Compile Include="VisitorWidget\IWidgetGetter.cs" />
+    <Compile Include="VisitorWidget\Levers.cs" />
+    <Compile Include="VisitorWidget\Springs.cs" />
+    <Compile Include="VisitorWidget\WidgetInventory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

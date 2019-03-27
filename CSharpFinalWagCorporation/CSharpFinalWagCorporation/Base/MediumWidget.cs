@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSharpFinalWagCorporation
 {
-    public class SmallWidget : AbstractWidget
+    public class MediumWidget : AbstractWidget
     {
-        public SmallWidget(int size) : base(size, true)
+        public MediumWidget(int size) : base(size, true)
         {
 
         }

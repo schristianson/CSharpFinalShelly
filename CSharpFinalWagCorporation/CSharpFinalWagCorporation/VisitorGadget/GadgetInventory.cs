@@ -5,25 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using CSharpFinalWagCorporation;
 
-namespace Visitor
+namespace VisitorGadget
 {
     public class GadgetInventory : IGadgetBuyer
     {
+        private int _widgetCount;
         private int _switchesCount;
         private int _buttonsCount;
 
-        public GadgetInventory()
+        public GadgetInventory(int widgetCount, int switchCount, int buttonsCount, string powersource)
         {
-            _switchesCount = 1;
-            _buttonsCount = 2;
-            _powersource = "battery";
+            _widgetCount = widgetCount;
+            _switchesCount = switchCount;
+            _buttonsCount = buttonsCount;
+            _powersource = powersource;
         }
 
         public object _powersource { get; private set; }
 
         public void Buyer(IGadget gadget)
         {
-            Console.WriteLine("The Small Gadget has: {0} switches and {1} buttons and {2} powersource", _switchesCount, _buttonsCount, _powersource);
+            Console.WriteLine("having: {0} widgets and {1} switches and {2} buttons and {3} powersource", _widgetCount, _switchesCount, _buttonsCount, _powersource);
+        }
+
+        public void Visit(Widgets widgets)
+        {
+            _widgetCount++;
         }
 
         public void Visit(Switches switches)

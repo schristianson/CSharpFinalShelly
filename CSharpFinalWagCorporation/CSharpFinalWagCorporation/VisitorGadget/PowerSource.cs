@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using CSharpFinalWagCorporation;
 
-namespace Visitor
+namespace VisitorGadget
 {
-    public class Switches : IBuyer
+    public class PowerSource : IBuyer
     {
         public void AcceptBuyer(IGadgetBuyer buyer)
         {
-            //buyer.Buyer(this);
+
         }
     }
 }

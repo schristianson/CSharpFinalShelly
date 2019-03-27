@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpFinalWagCorporation
+namespace VisitorGadget
 {
-    public class SmallWidget : AbstractWidget
+    public class Gadgets : IBuyer
     {
-        public SmallWidget(int size) : base(size, true)
+        public void AcceptBuyer(IGadgetBuyer buyer)
         {
-
+            // TODO add method here
         }
     }
 }
