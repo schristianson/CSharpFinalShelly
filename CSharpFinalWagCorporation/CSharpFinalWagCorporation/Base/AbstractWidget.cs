@@ -16,11 +16,6 @@ namespace CSharpFinalWagCorporation
         private Springs _springs;
         private Levers _levers;
 
-
-        //public abstract string Gears { get; }
-        //public string Springs { get; }
-        //public string Levers { get; }
-
         public int Size
         {
             get
@@ -39,13 +34,8 @@ namespace CSharpFinalWagCorporation
 
         public void AcceptBuyer(IGadgetBuyer buyer)
         {
-            throw new NotImplementedException();
-        }
 
-        //public void AcceptGetter(IWidgetGetter getter)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        }
 
         public AbstractWidget(int size, bool isSmall)
         {

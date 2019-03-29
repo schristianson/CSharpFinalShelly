@@ -13,6 +13,6 @@ namespace CSharpFinalWagCorporation
         int Size { get; }
         bool IsSmall { get; }
 
-        void AcceptGetter(IWidgetGetter getter); //abstractgadget takes in this interface
+        void AcceptGetter(IWidgetGetter getter);
     }
 }

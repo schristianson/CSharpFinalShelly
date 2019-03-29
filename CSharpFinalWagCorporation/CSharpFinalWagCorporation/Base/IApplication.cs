@@ -17,9 +17,5 @@ namespace CSharpFinalWagCorporation
         void Paint(GadgetFinish finish);
 
         void PowerSource();
-
-        //void AirTires();
-
-        //void TestRide();
     }
 }

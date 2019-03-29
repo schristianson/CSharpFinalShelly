@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace CSharpFinalWagCorporation
 {
-    //public enum BikeColor
     public enum GadgetFinish
     {
         Plain, Painted, Plated

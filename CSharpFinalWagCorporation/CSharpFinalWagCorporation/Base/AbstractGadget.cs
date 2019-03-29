@@ -19,28 +19,32 @@ namespace CSharpFinalWagCorporation
 
         public void SizeGadgetIfChain(int size, GadgetFinish finish)
         {
-            //int size = 1;
-            SerialNumberGenerator generator = SerialNumberGenerator.Instance;
+            SerialGenGadget generator = SerialGenGadget.Instance;
             Console.WriteLine("Buy the Lowest priced ");
             if (size == 1)
             {
                 Console.WriteLine("small gadget ====> ");
                 AcceptBuyer(new GadgetInventory(2, 1, 2, "battery"));
                 Console.WriteLine("This gadget is gold " + finish);
+                Console.WriteLine("Serial# Sticker 02SML " + generator.NextSerial);
 
                 IWidget widget = new SmallWidget(14);
                 widget.AcceptGetter(new WidgetInventory());
-                Console.WriteLine("Sticker 02SML " + generator.NextSerial);
+                SerialGenWidgetSmall gensmlw = SerialGenWidgetSmall.Instance;
+                Console.WriteLine("Serial# Sticker 22SML " + gensmlw.NextSerial);
                 Console.WriteLine(widget);
             }
             else if (size == 2)
             {
-                Console.WriteLine("Buy Medium Gadget");
+                Console.WriteLine("medium gadget ====> ");
                 AcceptBuyer(new GadgetInventory(5, 1, 2, "solar"));
+                Console.WriteLine("This gadget is silver " + finish);
+                Console.WriteLine("Serial# Sticker 04MED " + generator.NextSerial);
 
                 IWidget widget = new MediumWidget(14);
                 widget.AcceptGetter(new WidgetInventory());
-                Console.WriteLine("Sticker 04MED " + generator.NextSerial);
+                SerialGenWidgetMed genmedw = SerialGenWidgetMed.Instance;
+                Console.WriteLine("Serial# Sticker 44MED " + genmedw.NextSerial);
                 Console.WriteLine(widget);
             }
             else if (size == 3)
@@ -50,7 +54,7 @@ namespace CSharpFinalWagCorporation
 
                 IWidget widget = new LargeWidget(14);
                 widget.AcceptGetter(new WidgetInventory());
-                Console.WriteLine("Sticker 06LRG " + generator.NextSerial);
+                Console.WriteLine("Serial# Sticker 06LRG " + generator.NextSerial);
                 Console.WriteLine(widget);
             }
             else if (size > 3)
@@ -61,7 +65,6 @@ namespace CSharpFinalWagCorporation
             {
                 Console.WriteLine("Size requested not found");
             }
-            //Console.WriteLine("After If");
         }
 
 

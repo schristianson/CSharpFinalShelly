@@ -7,7 +7,7 @@ using VisitorWidget;
 
 namespace VisitorGadget
 {
-    public interface IBuyer             //IVisitable
+    public interface IBuyer
     {
         void AcceptBuyer(IGadgetBuyer buyer);
     }
