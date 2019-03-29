@@ -15,16 +15,19 @@ namespace CSharpFinalWagCorporation
         private bool _isSmall;
         private Switches _switches;
         private Buttons _buttons;
+        private Lights _lights;
         private PowerSource _powersource;
 
-        public void SizeGadgetIfChain(int size, GadgetFinish finish)
+        public void SizeGadgetIfChain(int size, GadgetFinish finish, WidgetFinish finishw)
+
         {
             SerialGenGadget generator = SerialGenGadget.Instance;
-            Console.WriteLine("Buy the Lowest priced ");
+
             if (size == 1)
             {
+                Console.WriteLine("Buy the Lowest priced ");
                 Console.WriteLine("small gadget ====> ");
-                AcceptBuyer(new GadgetInventory(2, 1, 2, "battery"));
+                AcceptBuyer(new GadgetInventory(2, 1, 2, 0, "battery"));
                 Console.WriteLine("This gadget is gold " + finish);
                 Console.WriteLine("Serial# Sticker 02SML " + generator.NextSerial);
 
@@ -33,29 +36,39 @@ namespace CSharpFinalWagCorporation
                 SerialGenWidgetSmall gensmlw = SerialGenWidgetSmall.Instance;
                 Console.WriteLine("Serial# Sticker 22SML " + gensmlw.NextSerial);
                 Console.WriteLine(widget);
+                Console.WriteLine(finishw);
             }
             else if (size == 2)
             {
+                Console.WriteLine("Buy the Medium priced ");
                 Console.WriteLine("medium gadget ====> ");
-                AcceptBuyer(new GadgetInventory(5, 1, 2, "solar"));
+                AcceptBuyer(new GadgetInventory(5, 1, 2, 3, "solar"));
                 Console.WriteLine("This gadget is silver " + finish);
                 Console.WriteLine("Serial# Sticker 04MED " + generator.NextSerial);
 
-                IWidget widget = new MediumWidget(14);
+                IWidget widget = new MediumWidget(15);
                 widget.AcceptGetter(new WidgetInventory());
                 SerialGenWidgetMed genmedw = SerialGenWidgetMed.Instance;
                 Console.WriteLine("Serial# Sticker 44MED " + genmedw.NextSerial);
                 Console.WriteLine(widget);
+                Console.WriteLine(finishw);
+
             }
             else if (size == 3)
             {
-                Console.WriteLine("Buy Large Gadget");
-                AcceptBuyer(new GadgetInventory(12, 2, 4, "generator"));
-
-                IWidget widget = new LargeWidget(14);
-                widget.AcceptGetter(new WidgetInventory());
+                Console.WriteLine("Buy the Large priced ");
+                Console.WriteLine("large gadget ====> ");
+                AcceptBuyer(new GadgetInventory(12, 2, 4, 5, "generator"));
+                Console.WriteLine("This gadget is platinum " + finish);
                 Console.WriteLine("Serial# Sticker 06LRG " + generator.NextSerial);
+
+                IWidget widget = new LargeWidget(16);
+                widget.AcceptGetter(new WidgetInventory());
+                SerialGenWidgetMed genmedw = SerialGenWidgetMed.Instance;
+                Console.WriteLine("Serial# Sticker 66LRG " + genmedw.NextSerial);
                 Console.WriteLine(widget);
+                Console.WriteLine(finishw);
+
             }
             else if (size > 3)
             {
@@ -104,7 +117,8 @@ namespace CSharpFinalWagCorporation
 
         public override string ToString()
         {
-            return this.GetType().Name + " with a gadget size of " + _size + " inches";
+            return "";
+            //return this.GetType().Name + " with a gadget size of " + _size + " inches";
         }
     }
 }

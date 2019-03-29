@@ -21,7 +21,15 @@ namespace CSharpFinalWagCorporation
         private static void VisitorPatternG()
         {
             IGadget gadget = new SmallGadget(24);
-            gadget.SizeGadgetIfChain(1, GadgetFinish.Painted);
+
+            //Small Gadget Size=1:
+            //gadget.SizeGadgetIfChain(1, GadgetFinish.Painted, WidgetFinish.Plain);
+
+            //Medium Gadget Size=2:
+            gadget.SizeGadgetIfChain(2, GadgetFinish.Plated, WidgetFinish.Plain);
+
+            //Large Gadget Size=3:
+            //gadget.SizeGadgetIfChain(3, GadgetFinish.Plated, WidgetFinish.Plain);
 
             Console.WriteLine(gadget);
         }

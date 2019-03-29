@@ -12,7 +12,7 @@ namespace CSharpFinalWagCorporation
     {
         int Size { get; }
         bool IsSmall { get; }
-        void SizeGadgetIfChain(int size, GadgetFinish finish);
+        void SizeGadgetIfChain(int size, GadgetFinish finish, WidgetFinish finishw);
         new void AcceptBuyer(IGadgetBuyer buyer);
     }
 }

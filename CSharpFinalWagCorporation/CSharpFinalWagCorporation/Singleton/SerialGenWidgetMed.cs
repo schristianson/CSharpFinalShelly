@@ -12,7 +12,8 @@ namespace Singleton
 
         private static object synchronizationRoot = new object();
 
-        private int _count = 2456;
+        private int _count = 2456;   //Serial medium
+        //private int _count = 3567;   //Serial large
 
         public static SerialGenWidgetMed Instance
         {

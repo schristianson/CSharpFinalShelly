@@ -58,5 +58,10 @@ namespace CSharpFinalWagCorporation
         {
             return this.GetType().Name + " with a widget size of " + _size + " inches";
         }
+
+        public void SizeGadgetIfChain(int size, WidgetFinish finishw)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

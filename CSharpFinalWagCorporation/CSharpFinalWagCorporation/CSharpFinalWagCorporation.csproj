@@ -67,6 +67,7 @@
     <Compile Include="VisitorGadget\IBuyer.cs" />
     <Compile Include="GadgetFinish.cs" />
     <Compile Include="VisitorGadget\GadgetInventory.cs" />
+    <Compile Include="VisitorGadget\Lights.cs" />
     <Compile Include="VisitorGadget\PowerSource.cs" />
     <Compile Include="VisitorGadget\Switches.cs" />
     <Compile Include="VisitorGadget\Widgets.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="VisitorWidget\Levers.cs" />
     <Compile Include="VisitorWidget\Springs.cs" />
     <Compile Include="VisitorWidget\WidgetInventory.cs" />
+    <Compile Include="WidgetFinish.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

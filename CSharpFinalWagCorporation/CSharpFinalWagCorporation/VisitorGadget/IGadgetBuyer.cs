@@ -15,6 +15,8 @@ namespace VisitorGadget
 
         void Visit(Buttons buttons);
 
+        void Visit(Lights lights);
+
         void Visit(PowerSource powersource);
 
     }
