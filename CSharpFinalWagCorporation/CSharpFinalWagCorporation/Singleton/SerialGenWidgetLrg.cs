@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Singleton
 {
-    public class SerialGenWidgetSmall
+    public class SerialGenWidgetLrg
     {
-        private static volatile SerialGenWidgetSmall instance;
+        private static volatile SerialGenWidgetLrg instance;
 
         private static object synchronizationRoot = new object();
 
-        private int _count = 1345;   //Serial small
+        private int _count = 3567;   //Serial large
 
-        public static SerialGenWidgetSmall Instance
+        public static SerialGenWidgetLrg Instance
         {
             get
             {
@@ -24,14 +24,14 @@ namespace Singleton
                     {
                         if (instance == null)
                         {
-                            instance = new SerialGenWidgetSmall();
+                            instance = new SerialGenWidgetLrg();
                         }
                     }
                 }
                 return instance;
             }
         }
-        private SerialGenWidgetSmall() { }
+        private SerialGenWidgetLrg() { }
 
         public int NextSerial
         {

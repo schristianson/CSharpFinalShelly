@@ -25,7 +25,8 @@ namespace VisitorWidget
 
         public void Getter(IWidget widget)
         {
-            Console.WriteLine("The Small Widget has: {0} gears and {1} springs and {2} levers", _gearsCount, _springsCount, _leversCount);
+            Console.WriteLine("This Widget has: {0} gears and {1} springs and {2} levers", _gearsCount, _springsCount, _leversCount);
+            Console.WriteLine(" ");
         }
 
         public void Visit(Gears gears)

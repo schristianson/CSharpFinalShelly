@@ -21,10 +21,12 @@ namespace CSharpFinalWagCorporation
         public void SizeGadgetIfChain(int size, GadgetFinish finish, WidgetFinish finishw)
 
         {
-            SerialGenGadget generator = SerialGenGadget.Instance;
-
             if (size == 1)
             {
+                SerialGenGadgetSmall generator = SerialGenGadgetSmall.Instance;
+
+                Console.WriteLine(" ");
+                Console.WriteLine(" ");
                 Console.WriteLine("Buy the Lowest priced ");
                 Console.WriteLine("small gadget ====> ");
                 AcceptBuyer(new GadgetInventory(2, 1, 2, 0, "battery"));
@@ -40,6 +42,10 @@ namespace CSharpFinalWagCorporation
             }
             else if (size == 2)
             {
+                SerialGenGadgetMed generator = SerialGenGadgetMed.Instance;
+
+                Console.WriteLine(" ");
+                Console.WriteLine(" ");
                 Console.WriteLine("Buy the Medium priced ");
                 Console.WriteLine("medium gadget ====> ");
                 AcceptBuyer(new GadgetInventory(5, 1, 2, 3, "solar"));
@@ -56,6 +62,10 @@ namespace CSharpFinalWagCorporation
             }
             else if (size == 3)
             {
+                SerialGenGadgetLrg generator = SerialGenGadgetLrg.Instance;
+
+                Console.WriteLine(" ");
+                Console.WriteLine(" ");
                 Console.WriteLine("Buy the Large priced ");
                 Console.WriteLine("large gadget ====> ");
                 AcceptBuyer(new GadgetInventory(12, 2, 4, 5, "generator"));
@@ -64,8 +74,8 @@ namespace CSharpFinalWagCorporation
 
                 IWidget widget = new LargeWidget(16);
                 widget.AcceptGetter(new WidgetInventory());
-                SerialGenWidgetMed genmedw = SerialGenWidgetMed.Instance;
-                Console.WriteLine("Serial# Sticker 66LRG " + genmedw.NextSerial);
+                SerialGenWidgetLrg genlrgw = SerialGenWidgetLrg.Instance;
+                Console.WriteLine("Serial# Sticker 66LRG " + genlrgw.NextSerial);
                 Console.WriteLine(widget);
                 Console.WriteLine(finishw);
 
